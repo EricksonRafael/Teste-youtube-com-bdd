@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-10T10:54:04.497860" rpa="false" schemaversion="5">
+<suite id="s1" name="Bdd" source="C:\Users\ERICKSON RAFAEL\Desktop\Estudo\Projetos\Tutorial Robot\bdd.robot">
+<test id="s1-t1" name="Cenário 1: Executar vídeo no site do youtube" line="36">
+<kw name="Dado que eu acesso o site do youtube">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-10T10:54:05.036564" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-10T10:54:05.036564" elapsed="9.352812"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-10T10:54:14.390371" elapsed="0.721126"/>
+</kw>
+<status status="PASS" start="2024-08-10T10:54:05.035565" elapsed="10.075932"/>
+</kw>
+<kw name="Quando digito o nome da música">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-10T10:54:15.137472" level="INFO">Typing text 'Red hot chilli peppers Under the bridge' into text field '//input[@id="search"]'.</msg>
+<arg>${Input_Pesquisa}</arg>
+<arg>${NomeDaMusica}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-10T10:54:15.136473" elapsed="1.175615"/>
+</kw>
+<status status="PASS" start="2024-08-10T10:54:15.135491" elapsed="1.176597"/>
+</kw>
+<kw name="E clico no botão buscar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-10T10:54:16.315086" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<arg>${Button_Pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-10T10:54:16.314088" elapsed="0.399298"/>
+</kw>
+<status status="PASS" start="2024-08-10T10:54:16.313088" elapsed="0.400298"/>
+</kw>
+<kw name="E clico na primeira opção da lista">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Primeiro}</arg>
+<arg>12</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-10T10:54:16.752363" elapsed="2.111791"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-10T10:54:18.865155" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
+<arg>${Primeiro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-10T10:54:18.865155" elapsed="0.675613"/>
+</kw>
+<status status="PASS" start="2024-08-10T10:54:16.751363" elapsed="2.789405"/>
+</kw>
+<kw name="Então o vídeo é executado">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Prova}</arg>
+<arg>12</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-10T10:54:19.556761" elapsed="3.192580"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-10T10:54:23.636232" level="INFO">Element '//tp-yt-paper-button[@id="expand"]' is displayed.</msg>
+<arg>${Prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-10T10:54:22.750317" elapsed="0.885915"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-10T10:54:25.637888" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-10T10:54:23.637232" elapsed="2.000656"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-10T10:54:25.637888" elapsed="2.598134"/>
+</kw>
+<status status="PASS" start="2024-08-10T10:54:19.556761" elapsed="8.680205"/>
+</kw>
+<status status="PASS" start="2024-08-10T10:54:05.034546" elapsed="23.203396"/>
+</test>
+<status status="PASS" start="2024-08-10T10:54:04.500861" elapsed="23.741655"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Bdd">Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
